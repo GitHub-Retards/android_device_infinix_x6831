@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_Infinix-X6831.mk
+    $(LOCAL_DIR)/lineage_x6831.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_Infinix-X6831-user \
-    lineage_Infinix-X6831-userdebug \
-    lineage_Infinix-X6831-eng
+    lineage_x6831-user \
+    lineage_x6831-userdebug \
+    lineage_x6831-eng
