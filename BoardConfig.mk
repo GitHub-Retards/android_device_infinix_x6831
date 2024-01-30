@@ -60,6 +60,7 @@ TARGET_KERNEL_CONFIG := Infinix-X6831_defconfig
 TARGET_KERNEL_SOURCE := kernel/infinix/Infinix-X6831
 
 # Kernel - prebuilt
+TARGET_NO_KERNEL := true
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
