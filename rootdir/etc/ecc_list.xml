@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EccTable>
+    <!--
+        Configure emergency numbers for open market load. For the emergey numbers defined in
+        3GPP TS 22.101 (112/911 when SIM/USIM present and 112/911/000/08/110/118/119/999
+        when SIM/USIM not present) it will be configure in default emergency number source,
+        so no need to configure here if there is no special request for these numbers.
+
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category (From 3GPP TS24.008)
+            - Bit 1 (1): Police
+            - Bit 2 (2): Ambulance
+            - Bit 3 (4): Fire Brigade
+            - Bit 4 (8): Marine Guard
+            - Bit 5 (16): Mountain Rescue
+            - Bit 6 (32): Manually initiated eCall
+            - Bit 7 (64): Automatically initiated eCall
+            - Bit 8 (128): is spare and set to "0"
+        - Condition: there are following values:
+            - 0: ecc only when no sim
+            - 1: ecc always
+            - 2: MMI will show ecc but send to nw as normal call
+        - Plmn: Operator PLMN which contains MCC+MNC.
+                Use FFF or FF for all operators under same country
+                Ex: 460 FFF means all operators in China
+    -->
+
+    <!-- TDD: modify ecc list XLJQGXLJB-3392 by zhangzhendong 20210728 start -->
+    <EccEntry Ecc="112" Category="0" Condition="1" Plmn=""/>
+    <EccEntry Ecc="911" Category="0" Condition="1" Plmn=""/>
+    <EccEntry Ecc="08" Category="0" Condition="0" Plmn="" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL1" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL2" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL3" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL4" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL5" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL6" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL7" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL8" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL9" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL10" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL11" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="NOMAL12" />
+    <EccEntry Ecc="000" Category="0" Condition="0" Plmn="" />
+    <EccEntry Ecc="118" Category="0" Condition="0" Plmn="" />
+    <EccEntry Ecc="119" Category="0" Condition="0" Plmn=""/>
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="" />
+    <EccEntry Ecc="767" Category="0" Condition="2" Plmn="621 FFF" />
+
+    <EccEntry Ecc="125" Category="0" Condition="0" Plmn="432 FFF" />
+    <EccEntry Ecc="115" Category="2" Condition="0" Plmn="432 FFF" />
+    <EccEntry Ecc="110" Category="0" Condition="0" Plmn="432 FFF" />
+    <EccEntry Ecc="112" Category="0" Condition="0" Plmn="432 FFF" />
+
+    <!-- TDD: modify the condition from 1 to 2 for KIQVQW-2931 by song.yang6 2022.12.19 start -->
+    <EccEntry Ecc="192" Category="0" Condition="2" Plmn="220 FFF" />
+    <EccEntry Ecc="193" Category="0" Condition="2" Plmn="220 FFF" />
+    <EccEntry Ecc="194" Category="0" Condition="2" Plmn="220 FFF" />
+    <!-- TDD: modify the condition from 1 to 2 for KIQVQW-2931 by song.yang6 2022.12.19 end -->
+
+    <!-- TDD: add ecc list for XLBJFHLWYL-1002 by guoyi.qu 2021.10.27 start -->
+    <!-- modify by tianyuhu for XLBSYA-3852 at 2023.9.28
+    <EccEntry Ecc="101" Category="0" Condition="0" Plmn="250 FFF" />
+    <EccEntry Ecc="102" Category="0" Condition="0" Plmn="250 FFF" />
+    <EccEntry Ecc="103" Category="0" Condition="0" Plmn="250 FFF" />
+    <EccEntry Ecc="104" Category="0" Condition="0" Plmn="250 FFF" />
+    -->
+    <!-- TDD: add ecc list for XLBJFHLWYL-1002 by guoyi.qu 2021.10.27 end -->
+
+    <!-- TDD: add ecc list for CMSFTASK-243 by guoyi.qu 2021.11.3 start -->
+    <EccEntry Ecc="112" Category="0" Condition="0" Plmn="230 FFF" />
+    <EccEntry Ecc="155" Category="0" Condition="0" Plmn="230 FFF" />
+    <EccEntry Ecc="158" Category="0" Condition="0" Plmn="230 FFF" />
+    <EccEntry Ecc="150" Category="0" Condition="0" Plmn="230 FFF" />
+    <!-- TDD: add ecc list for CMSFTASK-243 by guoyi.qu 2021.11.3 end -->
+
+    <!-- TDD: add ecc list for CMSFTASK-243 by guoyi.qu 2021.11.3 start -->
+    <EccEntry Ecc="115" Category="0" Condition="0" Plmn="616 FFF" />
+    <EccEntry Ecc="118" Category="0" Condition="0" Plmn="616 FFF" />
+    <EccEntry Ecc="117" Category="0" Condition="0" Plmn="616 FFF" />
+    <EccEntry Ecc="999" Category="0" Condition="0" Plmn="616 FFF" />
+    <!-- TDD: add ecc list for CMSFTASK-243 by guoyi.qu 2021.11.3 end -->
+
+    <!-- TDD: add ecc list for XLBJFHLWYL-1077 by guoyi.qu 2021.12.23 start -->
+    <EccEntry Ecc="111" Category="0" Condition="2" Plmn="612 FFF" />
+    <EccEntry Ecc="170" Category="0" Condition="2" Plmn="612 FFF" />
+    <EccEntry Ecc="180" Category="0" Condition="2" Plmn="612 FFF" />
+    <EccEntry Ecc="185" Category="0" Condition="2" Plmn="612 FFF" />
+    <!-- TDD: add ecc list for XLBJFHLWYL-1077 by guoyi.qu 2021.12.23 end -->
+
+    <!-- TDD: add ecc list for XLBJFHLWYL-1077 by guoyi.qu 2021.12.23 start -->
+    <EccEntry Ecc="190" Category="0" Condition="3" Plmn="724 FFF" />
+    <!-- TDD: add ecc list for XLBJFHLWYL-1077 by guoyi.qu 2021.12.23 end -->
+
+    <!-- TDD: add ecc list for XLQEHBY-2349 by guoyi.qu 2022.2.14 start -->
+    <EccEntry Ecc="1404" Category="0" Condition="0" Plmn="628 FFF" />
+    <!-- TDD: add ecc list for XLQEHBY-2349 by guoyi.qu 2022.2.14 end -->
+    <!-- TDD: modify ecc list XLJQGXLJB-3392 by zhangzhendong 20210728 end -->
+
+	<!-- Tinno: add ecc list for KIQVQW-2707 by cheng.jiang5 2022.12.20 start -->
+	<EccEntry Ecc="18" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="1300" Category="0" Condition="0" Plmn="628 FFF" />
+	<EccEntry Ecc="1324" Category="0" Condition="0" Plmn="628 FFF" />
+	<EccEntry Ecc="1333" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="1401" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="1410" Category="0" Condition="0" Plmn="628 FFF" />
+	<EccEntry Ecc="1420" Category="0" Condition="0" Plmn="628 FFF" />
+	<EccEntry Ecc="1432" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="1442" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="1488" Category="0" Condition="0" Plmn="628 FFF" />
+    <EccEntry Ecc="8510" Category="0" Condition="0" Plmn="628 FFF" />
+	<EccEntry Ecc="8586" Category="0" Condition="0" Plmn="628 FFF" />
+	<!-- Tinno: add ecc list for KIQVQW-2707 by cheng.jiang5 2022.12.20 end -->
+	
+	<!-- Tinno: add ecc list for KIQVQW-2895/KIQVQW-2896/KIQVQW-2897/KIQVQW-2844/KIQVQW-2845 by song.yang6 2022.12.19 start -->
+	<EccEntry Ecc="113" Category="0" Condition="1" Plmn="510 FFF" />
+	<EccEntry Ecc="115" Category="0" Condition="0" Plmn="510 FFF" />
+	<EccEntry Ecc="117" Category="0" Condition="0" Plmn="510 FFF" />
+	<EccEntry Ecc="118" Category="0" Condition="1" Plmn="510 FFF" />
+	<EccEntry Ecc="129" Category="0" Condition="0" Plmn="510 FFF" />
+	<!-- Tinno: add ecc list for KIQVQW-2895/KIQVQW-2896/KIQVQW-2897/KIQVQW-2844/KIQVQW-2845 by song.yang6 2022.12.19 end -->
+
+    <!-- TDD: add ecc list for KIQVQW-2354 by song.yang6 2022.12.21 start -->
+    <EccEntry Ecc="117" Category="0" Condition="0" Plmn="629 FFF" />
+    <EccEntry Ecc="118" Category="0" Condition="0" Plmn="629 FFF" />
+    <!-- TDD: add ecc list for KIQVQW-2354 by song.yang6 2022.12.21 end -->
+    <!-- Tinno: add ecc list for KIQVQW-3815 by bingxing.liu 2023.1.31 start -->
+    <EccEntry Ecc="155" Category="0" Condition="0" Plmn="286 FFF" />
+    <!-- Tinno: add ecc list for KIQVQW-3815 by bingxing.liu 2023.1.31 end -->
+    <!-- Tinno: add ecc list for XLBSYA-3412 by zhenlei.zhou 2023.3.31 start -->
+    <EccEntry Ecc="999" Category="0" Condition="1" Plmn="286 02" />
+    <!-- Tinno: add ecc list for XLBSYA-3412 by zhenlei.zhou 2023.3.31 end -->
+    <!-- Tinno: add ecc list for KIQVQW-4303 by bingxing.liu 2023.3.9 start -->
+    <EccEntry Ecc="117" Category="0" Condition="1" Plmn="607 04" />
+    <!-- Tinno: add ecc list for KIQVQW-4303 by bingxing.liu 2023.3.9 end -->
+    <!-- Tinno: add ecc list for KI7SV7510-225 by bingxing.liu 2023.4.14 start -->
+    <EccEntry Ecc="133" Category="0" Condition="1" Plmn="730 FFF" />
+    <!-- Tinno: add ecc list for KI7SV7510-225 by bingxing.liu 2023.4.14 end -->
+    <!-- Tinno: add ecc list for XLBSYA-3618 by bingxing.liu 2023.5.30 start -->
+    <EccEntry Ecc="917" Category="0" Condition="0" Plmn="542 FFF" />
+    <!-- Tinno: add ecc list for XLBSYA-3618 by bingxing.liu 2023.5.30 end -->
+    <!-- Tinno: add ecc list for KIQVQW-4815 by yuhu.tian 2023.8.9 start -->
+    <EccEntry Ecc="101" Category="0" Condition="0" Plmn="436 FFF" />
+    <EccEntry Ecc="102" Category="0" Condition="0" Plmn="436 FFF" />
+    <EccEntry Ecc="103" Category="0" Condition="0" Plmn="436 FFF" />
+    <!-- Tinno: add ecc list for KIQVQW-4815 by yuhu.tian 2023.8.9 end -->
+</EccTable>

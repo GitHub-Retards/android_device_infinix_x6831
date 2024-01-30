@@ -1,0 +1,15 @@
+on early-boot
+    insmod /vendor/lib/modules/trancare.ko
+on boot
+    chown system system /dev/tranlog_kernel
+    chmod 0666 /dev/tranlog_kernel
+    chown system system /dev/tranlog_user
+    chmod 0666 /dev/tranlog_user
+    chown system system /dev/tranlog_ctl
+    chmod 0666 /dev/tranlog_ctl
+    chown system system /dev/tranlog_reg
+    chmod 0666 /dev/tranlog_reg
+    chown system system /dev/tranlog_config
+    chmod 0666 /dev/tranlog_config
+    chown system system /dev/tranlog_cloudctl
+    chmod 0666 /dev/tranlog_cloudctl

@@ -1,0 +1,9 @@
+{
+  "version":20220921,
+  "support": "1",
+  "param": {
+    "window_size": 600,
+    "prediction_time": 3,
+    "reset_time":7200
+  }
+}

@@ -1,0 +1,14 @@
+# 
+#  Copyright (C) 2020 FocalTech Systems Co., Ltd. All Rights Reserved.
+# 
+#  Initial Author: James.Lee <lijing@focaltech-electronics.com>
+# 
+# 
+service vendor.focaltech.fps_hal /vendor/bin/hw/vendor.focaltech.hardware.biometrics.fingerprint@1.0-service
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    # class late_start
+    class hal
+    user system
+    group system input

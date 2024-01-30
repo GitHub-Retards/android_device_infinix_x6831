@@ -1,0 +1,5 @@
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/memfusion2/fstab.enableswap
+
+on early-boot
+    insmod /vendor/lib/modules/memfusion.ko

@@ -1,0 +1,4 @@
+on init
+    chmod 0666 /dev/fpsdev0
+
+    chmod 0666 /proc/ppm/policy/ut_fix_freq_idx

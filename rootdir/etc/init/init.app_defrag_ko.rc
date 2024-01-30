@@ -1,0 +1,3 @@
+
+on boot
+    insmod /vendor/lib/modules/app_defrag.ko
