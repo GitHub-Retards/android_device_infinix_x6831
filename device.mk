@@ -40,7 +40,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # Include layers
-DEVICE_PACKAGE_OVERLAYS += device/infinix/x6831/overlay
+DEVICE_PACKAGE_OVERLAYS += device/infinix/X6831/overlay
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
