@@ -72,7 +72,6 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREB
 UILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 TARGET_PREBUILT_KERNEL := device/infinix/x6831/prebuilts/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
