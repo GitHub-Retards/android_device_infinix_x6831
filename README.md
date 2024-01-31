@@ -1,4 +1,4 @@
-# Android device tree for Infinix Infinix X6831 (Infinix-X6831)
+﻿# Android device tree for Infinix Hot 30 (x6831)
 
 ```
 #
@@ -6,5 +6,3 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-```
-# android_device_infinix_x6831
