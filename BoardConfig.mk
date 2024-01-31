@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/infinix/x6831
+DEVICE_PATH := device/infinix/X6831
 
 BOARD_VNDK_VERSION := 31
 
@@ -62,8 +62,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_CONFIG := x6831_defconfig
-TARGET_KERNEL_SOURCE := kernel/infinix/x6831
+TARGET_KERNEL_CONFIG := X6831_defconfig
+TARGET_KERNEL_SOURCE := kernel/infinix/X6831
 
 # Kernel - prebuilt
 TARGET_NO_KERNEL_OVERRIDE := true
@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
 TARGET_FORCE_PREBUILT_KERNEL := true
 ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
 UILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-TARGET_PREBUILT_KERNEL := device/infinix/x6831/prebuilts/kernel
+TARGET_PREBUILT_KERNEL := device/infinix/X6831/prebuilts/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -122,4 +122,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Inherit the proprietary files
-include vendor/infinix/x6831/BoardConfigVendor.mk
+include vendor/infinix/X6831/BoardConfigVendor.mk

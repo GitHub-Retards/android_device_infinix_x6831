@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_PACKAGE_OVERLAYS := device/infinix/x6831/overlay
+PRODUCT_PACKAGE_OVERLAYS := device/infinix/X6831/overlay
 
-$(call inherit-product-if-exists, vendor/infinix/x6831/x6831-vendor.mk)
+$(call inherit-product-if-exists, vendor/infinix/X6831/X6831-vendor.mk)
 
 # Copying audio files
 PRODUCT_COPY_FILES += \
@@ -136,4 +136,4 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/infinix/x6831/x6831-vendor.mk)
+$(call inherit-product, vendor/infinix/X6831/X6831-vendor.mk)
