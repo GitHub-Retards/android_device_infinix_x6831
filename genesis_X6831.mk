@@ -9,13 +9,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/blaze/config/common.mk)
+$(call inherit-product, vendor/genesis/config/common.mk)
 
 # Inherit from Infinix-X6831 device
 $(call inherit-product, device/infinix/X6831/device.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USES_AOSP_RECOVERY := true
+TARGET_SUPPORTS_QUICK_TAP := true
+
 PRODUCT_DEVICE := X6831
-PRODUCT_NAME := blaze_X6831
+PRODUCT_NAME := genesis_X6831
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix HOT 30
 PRODUCT_MANUFACTURER := infinix

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_X6831.mk
+    $(LOCAL_DIR)/genesis_X6831.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_X6831-user \
-    blaze_X6831-userdebug \
-    blaze_X6831-eng \
+    genesis_X6831-user \
+    genesis_X6831-userdebug \
+    genesis_X6831-eng \
