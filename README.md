@@ -7,4 +7,4 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
-# android_device_infinix_x6831
+# This Tree Is For Genesis OS, Adapt To Your ROM To Build For It
